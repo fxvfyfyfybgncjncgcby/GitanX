@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" type="image/webp" href="https://cdn.discordapp.com/emojis/1456943539165331519.webp?size=44">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitanX - Keys</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.3); }
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.95);
+            padding: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.5px;
+            z-index: 1001;
+            position: relative;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 5px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.95em;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-links a.active {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 40px;
+            height: 40px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1001;
+            position: relative;
+            background: transparent;
+            border: none;
+            padding: 8px;
+        }
+
+        .menu-toggle span {
+            width: 24px;
+            height: 2px;
+            background: #ffffff;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .nav-overlay {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 140px 40px 60px 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cards-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 5em;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: -3px;
+            text-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .lifetime-promo {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 165, 0, 0.15));
+            border: 3px solid;
+            border-image: linear-gradient(135deg, #FFD700, #FFA500) 1;
+            border-radius: 28px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .lifetime-promo::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .lifetime-promo-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .lifetime-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+            animation: floatGlow 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.6));
+        }
+
+        @keyframes floatGlow {
+            0%, 100% { 
+                transform: translateY(0) scale(1);
+                filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.6));
+            }
+            50% { 
+                transform: translateY(-15px) scale(1.05);
+                filter: drop-shadow(0 0 60px rgba(255, 215, 0, 0.9));
+            }
+        }
+
+        .lifetime-title {
+            font-size: 2em;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .lifetime-subtitle {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .lifetime-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .lifetime-feature {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .lifetime-feature:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 215, 0, 0.6);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .lifetime-feature-icon {
+            font-size: 2em;
+            margin-bottom: 8px;
+        }
+
+        .lifetime-feature-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95em;
+            font-weight: 600;
+        }
+
+        .lifetime-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000000;
+            padding: 16px 40px;
+            border-radius: 14px;
+            font-size: 1.2em;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 50px rgba(255, 215, 0, 0.4);
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .lifetime-cta::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .lifetime-cta:hover::before {
+            width: 500px;
+            height: 500px;
+        }
+
+        .lifetime-cta:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 70px rgba(255, 215, 0, 0.6);
+            border-color: #FFF;
+        }
+
+        .lifetime-cta:active {
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        .lifetime-cta span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .lifetime-badge-text {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.2);
+            color: #FFD700;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9em;
+            font-weight: 700;
+            margin-top: 20px;
+            border: 2px solid rgba(255, 215, 0, 0.4);
+        }
+
+        .key-card {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            border-radius: 28px;
+            padding: 40px;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .key-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            animation: slide 4s infinite;
+        }
+
+        @keyframes slide {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .key-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
+        }
+
+        .key-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .key-icon {
+            font-size: 5em;
+            margin-bottom: 25px;
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.3));
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .key-game {
+            font-size: 2.8em;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+        }
+
+        .key-status {
+            display: inline-block;
+            background: rgba(76, 175, 80, 0.2);
+            color: #4CAF50;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: 600;
+            border: 2px solid rgba(76, 175, 80, 0.5);
+        }
+
+        .get-key-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            border: none;
+            padding: 22px;
+            border-radius: 16px;
+            font-size: 1.4em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .get-key-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .get-key-btn:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .get-key-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.6);
+        }
+
+        .get-key-btn:active {
+            transform: scale(0.98);
+        }
+
+        .get-key-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .key-info {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 25px;
+            border-radius: 14px;
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.05em;
+            line-height: 2;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .key-info p {
+            margin-bottom: 10px;
+        }
+
+        .key-info p:last-child {
+            margin-bottom: 0;
+        }
+
+        .key-info strong {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 20px;
+                height: 70px;
+            }
+
+            .logo {
+                font-size: 1.3em;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(0, 0, 0, 0.98);
+                flex-direction: column;
+                padding: 30px 20px;
+                gap: 0;
+                transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                border-left: 1px solid rgba(255, 255, 255, 0.1);
+                align-items: stretch;
+                overflow-y: auto;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .nav-links a {
+                width: 100%;
+                padding: 20px;
+                font-size: 1.15em;
+                text-align: left;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                min-height: 60px;
+            }
+
+            .nav-links a:active {
+                background: rgba(255, 255, 255, 0.15);
+                transform: scale(0.98);
+            }
+
+            h1 {
+                font-size: 2.8em;
+                letter-spacing: -2px;
+            }
+
+            .subtitle {
+                font-size: 1.2em;
+            }
+
+            .container {
+                padding: 100px 20px 50px 20px;
+            }
+
+            .cards-wrapper {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .lifetime-promo {
+                padding: 35px 25px;
+                margin-bottom: 30px;
+            }
+
+            .lifetime-icon {
+                font-size: 4em;
+                margin-bottom: 20px;
+            }
+
+            .lifetime-title {
+                font-size: 2em;
+            }
+
+            .lifetime-subtitle {
+                font-size: 1.1em;
+            }
+
+            .lifetime-features {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .lifetime-cta {
+                font-size: 1.3em;
+                padding: 18px 40px;
+            }
+
+            .key-card {
+                padding: 30px 25px;
+                border-radius: 20px;
+            }
+
+            .key-header {
+                margin-bottom: 30px;
+            }
+
+            .key-icon {
+                font-size: 3.5em;
+                margin-bottom: 20px;
+            }
+
+            .key-game {
+                font-size: 2em;
+                letter-spacing: -1px;
+            }
+
+            .key-status {
+                font-size: 1em;
+                padding: 8px 20px;
+            }
+
+            .get-key-btn {
+                font-size: 1.15em;
+                padding: 18px;
+            }
+
+            .key-info {
+                padding: 20px;
+                font-size: 0.95em;
+                line-height: 1.8;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.2em;
+                letter-spacing: -1px;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+            }
+
+            .container {
+                padding: 90px 15px 40px 15px;
+            }
+
+            .lifetime-promo {
+                padding: 30px 20px;
+            }
+
+            .lifetime-icon {
+                font-size: 3.5em;
+            }
+
+            .lifetime-title {
+                font-size: 1.8em;
+            }
+
+            .lifetime-subtitle {
+                font-size: 1em;
+            }
+
+            .lifetime-cta {
+                font-size: 1.2em;
+                padding: 16px 35px;
+            }
+
+            .key-card {
+                padding: 25px 20px;
+                border-radius: 18px;
+            }
+
+            .key-icon {
+                font-size: 3em;
+                margin-bottom: 15px;
+            }
+
+            .key-game {
+                font-size: 1.7em;
+            }
+
+            .key-status {
+                font-size: 0.9em;
+                padding: 7px 18px;
+            }
+
+            .get-key-btn {
+                font-size: 1.05em;
+                padding: 16px;
+            }
+
+            .key-info {
+                padding: 18px;
+                font-size: 0.9em;
+                line-height: 1.7;
+            }
+
+            .nav-links a {
+                font-size: 1.1em;
+                padding: 18px;
+                min-height: 58px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 1.9em;
+            }
+
+            .lifetime-title {
+                font-size: 1.5em;
+            }
+
+            .key-card {
+                padding: 20px 15px;
+            }
+
+            .key-game {
+                font-size: 1.5em;
+            }
+
+            .get-key-btn {
+                font-size: 1em;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">GitanX</div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                
+                <li><a href="keys.html" class="active">Key</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <div class="container">
+        <header>
+            <h1>🔑 GitanX Key</h1>
+            <p class="subtitle">Premium Access Key</p>
+        </header>
+
+        <div class="cards-wrapper">
+            <div class="lifetime-promo">
+                <div class="lifetime-promo-content">
+                    <div class="lifetime-icon">👑</div>
+                    <h2 class="lifetime-title">🌟 Lifetime Access! 🌟</h2>
+                    <p class="lifetime-subtitle">Get all key in the discord with 0 pub with nothing just copy</p>
+                    
+                    <div class="lifetime-features">
+                        <div class="lifetime-feature">
+                            <div class="lifetime-feature-icon">♾️</div>
+                            <div class="lifetime-feature-text">Never Expire</div>
+                        </div>
+                        <div class="lifetime-feature">
+                            <div class="lifetime-feature-icon">⚡</div>
+                            <div class="lifetime-feature-text">Priority Support</div>
+                        </div>
+                        <div class="lifetime-feature">
+                            <div class="lifetime-feature-icon">🎯</div>
+                            <div class="lifetime-feature-text">Only 100 robux</div>
+                        </div>
+                        <div class="lifetime-feature">
+                            <div class="lifetime-feature-icon">🔥</div>
+                            <div class="lifetime-feature-text">Early Updates</div>
+                        </div>
+                    </div>
+
+                    <a href="https://discord.gg/G9mZVF6TS5" class="lifetime-cta" target="_blank">
+                        <span>💎 Get lifetime Key 💎</span>
+                    </a>
+
+                    <div class="lifetime-badge-text">
+                        ✨ One-time payment • Forever access ✨
+                    </div>
+                </div>
+            </div>
+
+            <div class="key-card">
+                <div class="key-header">
+                    <div class="key-icon">⚡</div>
+                    <div class="key-game">GitanX Key</div>
+                    <span class="key-status">✓ Active</span>
+                </div>
+                
+                <a href="https://junkie-development.de/get-key/gitanx" class="get-key-btn" target="_blank">
+                    <span>🔑 Get Your Key</span>
+                </a>
+
+                <div class="key-info">
+                    <p>📅 <strong>Last Update:</strong> Today</p>
+                    <p>⏰ <strong>Validity:</strong> 1 day Access</p>
+                    <p>🔐 <strong>Status:</strong> Click button to get key</p>
+                    <p>⚡ <strong>Features:</strong> Full Premium Access</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navOverlay = document.getElementById('navOverlay');
+
+        function toggleMenu(e) {
+            if (e) e.stopPropagation();
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            navOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', closeMenu);
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                setTimeout(closeMenu, 150);
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+
+        navLinks.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            if (!starsContainer) return;
+            
+            for (let i = 0; i < 300; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                const size = Math.random() * 3 + 0.5;
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        createStars();
+    </script>
+    <script src="https://cdn.work.ink/js/redirect.js?id=2551" data-url="https://work.ink/direct/2551" data-max="1"></script>
+</body>
+</html>
