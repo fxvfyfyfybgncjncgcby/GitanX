@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robux Payment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .robux-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .instructions {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .instructions h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .instructions ol {
+            padding-left: 20px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+
+        .price-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .price-box h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .price-box .amount {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .payment-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .payment-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .payment-btn:active {
+            transform: translateY(0);
+        }
+
+        .note {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="robux-icon">💎</div>
+            <h1>Robux Payment</h1>
+        </div>
+
+        <div class="price-box">
+            <h3>Total Amount</h3>
+            <div class="amount">⭐ ROBUX</div>
+        </div>
+
+        <div class="instructions">
+            <h2>How to Pay with Robux</h2>
+            <ol>
+                <li><strong>Click the button below</strong> to access the payment pass</li>
+                <li><strong>Purchase the pass</strong> using your Robux balance</li>
+                <li><strong>Wait for confirmation</strong> - your purchase will be processed automatically</li>
+                <li><strong>Enjoy your purchase!</strong> Access will be granted immediately after payment</li>
+            </ol>
+        </div>
+
+        <button class="payment-btn" onclick="proceedToPayment()">
+            Proceed to Robux Payment →
+        </button>
+
+        <p class="note">
+            Secure payment through Roblox official platform
+        </p>
+    </div>
+
+    <script>
+        function proceedToPayment() {
+            // REMPLACEZ CETTE URL PAR VOTRE LIEN DE PASS
+            const passUrl = "https://www.roblox.com/game-pass/YOUR-PASS-ID-HERE";
+            
+            window.location.href = passUrl;
+        }
+    </script>
+</body>
+</html>
