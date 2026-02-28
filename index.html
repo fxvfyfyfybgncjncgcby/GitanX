@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-     <script data-cfasync="false" src="//d33f51dyacx7bd.cloudfront.net/?aydfd=1239876"></script>
+    <script data-cfasync="false" src="//d33f51dyacx7bd.cloudfront.net/?aydfd=1239876"></script>
     <link rel="icon" type="image/webp" href="https://cdn.discordapp.com/emojis/1456943539165331519.webp?size=44">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitanX - Keys</title>
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -24,76 +18,38 @@
             overflow-x: hidden;
         }
 
-        .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-        }
+        .stars { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
 
-        .star {
-            position: absolute;
-            background: white;
-            border-radius: 50%;
-            animation: twinkle 3s infinite;
-        }
+        .star { position: absolute; background: white; border-radius: 50%; animation: twinkle 3s infinite; }
 
         @keyframes twinkle {
             0%, 100% { opacity: 0.2; transform: scale(1); }
             50% { opacity: 1; transform: scale(1.3); }
         }
 
-        /* Adblock Modal */
+        /* ── ADBLOCK MODAL ── */
         .adblock-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.98);
-            z-index: 10000;
-            display: none;
-            justify-content: center;
-            align-items: center;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.98); z-index: 10000;
+            display: none; justify-content: center; align-items: center;
             backdrop-filter: blur(10px);
         }
-
-        .adblock-overlay.show {
-            display: flex;
-        }
+        .adblock-overlay.show { display: flex; }
 
         .adblock-modal {
-            background: linear-gradient(135deg, rgba(255, 0, 0, 0.15), rgba(255, 50, 50, 0.15));
-            border: 3px solid #ff0000;
-            border-radius: 28px;
-            padding: 50px 40px;
-            max-width: 600px;
-            width: 90%;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+            background: linear-gradient(135deg, rgba(255,0,0,0.15), rgba(255,50,50,0.15));
+            border: 3px solid #ff0000; border-radius: 28px; padding: 50px 40px;
+            max-width: 600px; width: 90%; text-align: center;
+            position: relative; overflow: hidden;
             animation: modalPulse 2s ease-in-out infinite;
         }
 
         @keyframes modalPulse {
-            0%, 100% { 
-                box-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
-                transform: scale(1);
-            }
-            50% { 
-                box-shadow: 0 0 60px rgba(255, 0, 0, 0.6);
-                transform: scale(1.02);
-            }
+            0%, 100% { box-shadow: 0 0 40px rgba(255,0,0,0.4); transform: scale(1); }
+            50% { box-shadow: 0 0 60px rgba(255,0,0,0.6); transform: scale(1.02); }
         }
 
-        .adblock-icon {
-            font-size: 6em;
-            margin-bottom: 25px;
-            animation: shake 0.5s ease-in-out infinite;
-        }
+        .adblock-icon { font-size: 6em; margin-bottom: 25px; animation: shake 0.5s ease-in-out infinite; }
 
         @keyframes shake {
             0%, 100% { transform: rotate(0deg); }
@@ -102,269 +58,180 @@
         }
 
         .adblock-title {
-            font-size: 2.5em;
-            font-weight: 800;
-            color: #ff0000;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            font-size: 2.5em; font-weight: 800; color: #ff0000;
+            margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(255,0,0,0.5);
         }
 
-        .adblock-message {
-            font-size: 1.3em;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
+        .adblock-message { font-size: 1.3em; color: rgba(255,255,255,0.9); margin-bottom: 30px; line-height: 1.6; }
 
         .adblock-steps {
-            background: rgba(0, 0, 0, 0.5);
-            border: 2px solid rgba(255, 0, 0, 0.3);
-            border-radius: 16px;
-            padding: 25px;
-            margin: 25px 0;
-            text-align: left;
+            background: rgba(0,0,0,0.5); border: 2px solid rgba(255,0,0,0.3);
+            border-radius: 16px; padding: 25px; margin: 25px 0; text-align: left;
         }
-
-        .adblock-steps h3 {
-            color: #ff6b6b;
-            font-size: 1.2em;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .adblock-steps ol {
-            padding-left: 25px;
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 2;
-        }
-
-        .adblock-steps li {
-            margin-bottom: 10px;
-        }
+        .adblock-steps h3 { color: #ff6b6b; font-size: 1.2em; margin-bottom: 15px; text-align: center; }
+        .adblock-steps ol { padding-left: 25px; color: rgba(255,255,255,0.8); line-height: 2; }
+        .adblock-steps li { margin-bottom: 10px; }
 
         .adblock-refresh-btn {
-            background: linear-gradient(135deg, #ff0000, #cc0000);
-            color: #ffffff;
-            border: none;
-            padding: 18px 40px;
-            border-radius: 14px;
-            font-size: 1.3em;
-            font-weight: 700;
-            cursor: pointer;
+            background: linear-gradient(135deg, #ff0000, #cc0000); color: #fff; border: none;
+            padding: 18px 40px; border-radius: 14px; font-size: 1.3em; font-weight: 700;
+            cursor: pointer; transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255,0,0,0.4);
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        .adblock-refresh-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(255,0,0,0.6); }
+
+        /* ── LIFETIME WARNING MODAL ── */
+        .lifetime-warning-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.92); z-index: 20000;
+            display: none; justify-content: center; align-items: center;
+            backdrop-filter: blur(10px);
+        }
+        .lifetime-warning-overlay.show { display: flex; animation: fadeIn 0.25s ease; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .lifetime-warning-modal {
+            background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,165,0,0.1));
+            border: 3px solid #FFD700; border-radius: 24px; padding: 45px 35px;
+            max-width: 520px; width: 90%; text-align: center;
+            box-shadow: 0 0 60px rgba(255,215,0,0.3);
+            animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .lw-icon { font-size: 3.5em; margin-bottom: 20px; }
+
+        .lw-title {
+            color: #FFD700; font-size: 1.8em; font-weight: 800;
+            margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        .lw-message {
+            color: rgba(255,255,255,0.85); font-size: 1.1em;
+            line-height: 1.7; margin-bottom: 25px;
+        }
+
+        .lw-discord-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #5865F2, #4752c4);
+            color: #fff; padding: 14px 35px; border-radius: 12px;
+            font-size: 1.1em; font-weight: 700; text-decoration: none;
+            margin-bottom: 15px; box-shadow: 0 10px 30px rgba(88,101,242,0.4);
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.4);
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
+        .lw-discord-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(88,101,242,0.6); }
 
-        .adblock-refresh-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 0, 0, 0.6);
+        .lw-divider { color: rgba(255,255,255,0.3); margin: 12px 0; font-size: 0.9em; }
+
+        .lw-roblox-btn {
+            display: inline-block; background: transparent;
+            border: 2px solid rgba(255,215,0,0.4); color: rgba(255,215,0,0.8);
+            padding: 10px 25px; border-radius: 10px; font-size: 0.95em;
+            font-weight: 600; text-decoration: none; cursor: pointer;
+            transition: all 0.3s ease; margin-bottom: 12px;
         }
+        .lw-roblox-btn:hover { border-color: #FFD700; color: #FFD700; background: rgba(255,215,0,0.05); }
 
-        .adblock-refresh-btn:active {
-            transform: translateY(0);
+        .lw-close-btn {
+            display: block; background: transparent;
+            border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.4);
+            padding: 8px 20px; border-radius: 8px; cursor: pointer;
+            font-size: 0.9em; margin: 8px auto 0; transition: all 0.2s ease;
         }
+        .lw-close-btn:hover { border-color: rgba(255,255,255,0.3); color: rgba(255,255,255,0.6); }
 
-        /* ── NAV SCROLL-HIDE ── */
+        /* ── NAV ── */
         nav {
-            background: rgba(0, 0, 0, 0.95);
-            padding: 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0,0,0,0.95); padding: 0;
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
             backdrop-filter: blur(20px);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
         }
-        nav.nav-hidden {
-            transform: translateY(-100%);
-        }
+        nav.nav-hidden { transform: translateY(-100%); }
 
         .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 40px;
-            height: 70px;
+            max-width: 1400px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 40px; height: 70px;
         }
 
         .logo {
-            font-size: 1.5em;
-            font-weight: 700;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            letter-spacing: -0.5px;
-            z-index: 1001;
-            position: relative;
-            text-decoration: none;
+            font-size: 1.5em; font-weight: 700; color: #fff;
+            display: flex; align-items: center; gap: 10px;
+            letter-spacing: -0.5px; z-index: 1001; position: relative; text-decoration: none;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 5px;
-            list-style: none;
-            align-items: center;
-        }
+        .nav-links { display: flex; gap: 5px; list-style: none; align-items: center; }
 
         .nav-links a {
-            color: rgba(255, 255, 255, 0.6);
-            text-decoration: none;
-            font-size: 0.95em;
-            padding: 8px 16px;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-            font-weight: 500;
+            color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.95em;
+            padding: 8px 16px; border-radius: 8px; transition: all 0.2s ease; font-weight: 500;
         }
-
-        .nav-links a:hover {
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .nav-links a.active {
-            color: #ffffff;
-            background: rgba(255, 255, 255, 0.1);
-        }
+        .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.05); }
+        .nav-links a.active { color: #fff; background: rgba(255,255,255,0.1); }
 
         .nav-status {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: #4CAF50 !important;
-            font-weight: 600 !important;
-            font-size: 0.9em !important;
-            cursor: default !important;
-            pointer-events: none;
+            display: flex; align-items: center; gap: 6px;
+            color: #4CAF50 !important; font-weight: 600 !important;
+            font-size: 0.9em !important; cursor: default !important; pointer-events: none;
         }
 
         .nav-discord {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: #5865F2;
-            color: #ffffff !important;
-            padding: 9px 18px !important;
-            border-radius: 10px !important;
-            font-weight: 600 !important;
-            font-size: 0.9em !important;
-            transition: all 0.2s ease !important;
+            display: flex; align-items: center; gap: 8px; background: #5865F2;
+            color: #fff !important; padding: 9px 18px !important; border-radius: 10px !important;
+            font-weight: 600 !important; font-size: 0.9em !important; transition: all 0.2s ease !important;
         }
-        .nav-discord:hover {
-            background: #6d7afc !important;
-            transform: translateY(-2px) !important;
-        }
+        .nav-discord:hover { background: #6d7afc !important; transform: translateY(-2px) !important; }
 
         .menu-toggle {
-            display: none;
-            width: 40px;
-            height: 40px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-            z-index: 1001;
-            position: relative;
-            background: transparent;
-            border: none;
-            padding: 8px;
+            display: none; width: 40px; height: 40px;
+            flex-direction: column; justify-content: center; align-items: center;
+            gap: 6px; cursor: pointer; z-index: 1001; position: relative;
+            background: transparent; border: none; padding: 8px;
         }
-
-        .menu-toggle span {
-            width: 24px;
-            height: 2px;
-            background: #ffffff;
-            transition: all 0.3s ease;
-            border-radius: 2px;
-        }
-
-        .menu-toggle.active span:nth-child(1) {
-            transform: rotate(45deg) translate(6px, 6px);
-        }
-
-        .menu-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .menu-toggle.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(6px, -6px);
-        }
+        .menu-toggle span { width: 24px; height: 2px; background: #fff; transition: all 0.3s ease; border-radius: 2px; }
+        .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+        .menu-toggle.active span:nth-child(2) { opacity: 0; }
+        .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
 
         .nav-overlay {
-            display: none;
-            position: fixed;
-            top: 70px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 999;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.7); z-index: 999; opacity: 0; transition: opacity 0.3s ease;
         }
+        .nav-overlay.active { display: block; opacity: 1; }
 
-        .nav-overlay.active {
-            display: block;
-            opacity: 1;
-        }
-
+        /* ── CONTENT ── */
         .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 140px 40px 60px 40px;
-            position: relative;
-            z-index: 1;
+            max-width: 1400px; margin: 0 auto;
+            padding: 140px 40px 60px 40px; position: relative; z-index: 1;
         }
 
-        .cards-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: start;
-        }
+        .cards-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
 
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
+        header { text-align: center; margin-bottom: 60px; }
 
         h1 {
-            font-size: 5em;
-            margin-bottom: 20px;
-            color: #ffffff;
-            font-weight: 700;
-            letter-spacing: -3px;
-            text-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
+            font-size: 5em; margin-bottom: 20px; color: #fff;
+            font-weight: 700; letter-spacing: -3px;
+            text-shadow: 0 0 50px rgba(255,255,255,0.2);
         }
 
-        .subtitle {
-            font-size: 1.5em;
-            color: rgba(255, 255, 255, 0.5);
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
+        .subtitle { font-size: 1.5em; color: rgba(255,255,255,0.5); font-weight: 400; letter-spacing: 1px; }
 
         .lifetime-promo {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 165, 0, 0.15));
-            border: 3px solid;
-            border-image: linear-gradient(135deg, #FFD700, #FFA500) 1;
-            border-radius: 28px;
-            padding: 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
-            animation: fadeInUp 0.8s ease;
+            background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,165,0,0.15));
+            border: 3px solid; border-image: linear-gradient(135deg, #FFD700, #FFA500) 1;
+            border-radius: 28px; padding: 40px; text-align: center;
+            position: relative; overflow: hidden; backdrop-filter: blur(10px);
+            box-shadow: 0 20px 60px rgba(255,215,0,0.3); animation: fadeInUp 0.8s ease;
         }
 
         @keyframes fadeInUp {
@@ -373,13 +240,8 @@
         }
 
         .lifetime-promo::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,215,0,0.1), transparent);
             animation: shine 3s infinite;
         }
 
@@ -388,426 +250,171 @@
             100% { transform: rotate(360deg); }
         }
 
-        .lifetime-promo-content {
-            position: relative;
-            z-index: 2;
-        }
+        .lifetime-promo-content { position: relative; z-index: 2; }
 
         .lifetime-icon {
-            font-size: 4em;
-            margin-bottom: 20px;
+            font-size: 4em; margin-bottom: 20px;
             animation: floatGlow 3s ease-in-out infinite;
-            filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.6));
+            filter: drop-shadow(0 0 40px rgba(255,215,0,0.6));
         }
 
         @keyframes floatGlow {
-            0%, 100% { 
-                transform: translateY(0) scale(1);
-                filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.6));
-            }
-            50% { 
-                transform: translateY(-15px) scale(1.05);
-                filter: drop-shadow(0 0 60px rgba(255, 215, 0, 0.9));
-            }
+            0%, 100% { transform: translateY(0) scale(1); filter: drop-shadow(0 0 40px rgba(255,215,0,0.6)); }
+            50% { transform: translateY(-15px) scale(1.05); filter: drop-shadow(0 0 60px rgba(255,215,0,0.9)); }
         }
 
         .lifetime-title {
-            font-size: 2em;
-            font-weight: 800;
+            font-size: 2em; font-weight: 800;
             background: linear-gradient(135deg, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;
             animation: pulse 2s ease-in-out infinite;
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
 
-        .lifetime-subtitle {
-            font-size: 1.1em;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 25px;
-            line-height: 1.5;
-        }
+        .lifetime-subtitle { font-size: 1.1em; color: rgba(255,255,255,0.8); margin-bottom: 25px; line-height: 1.5; }
 
-        .lifetime-features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin: 25px 0;
-            text-align: center;
-        }
+        .lifetime-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 25px 0; text-align: center; }
 
         .lifetime-feature {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 15px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            transition: all 0.3s ease;
+            background: rgba(0,0,0,0.5); padding: 15px; border-radius: 12px;
+            border: 1px solid rgba(255,215,0,0.3); transition: all 0.3s ease;
         }
+        .lifetime-feature:hover { transform: translateY(-5px); border-color: rgba(255,215,0,0.6); box-shadow: 0 10px 30px rgba(255,215,0,0.3); }
 
-        .lifetime-feature:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255, 215, 0, 0.6);
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
-        }
-
-        .lifetime-feature-icon {
-            font-size: 2em;
-            margin-bottom: 8px;
-        }
-
-        .lifetime-feature-text {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.95em;
-            font-weight: 600;
-        }
+        .lifetime-feature-icon { font-size: 2em; margin-bottom: 8px; }
+        .lifetime-feature-text { color: rgba(255,255,255,0.9); font-size: 0.95em; font-weight: 600; }
 
         .lifetime-cta {
             display: inline-block;
             background: linear-gradient(135deg, #FFD700, #FFA500);
-            color: #000000;
-            padding: 16px 40px;
-            border-radius: 14px;
-            font-size: 1.2em;
-            font-weight: 800;
-            text-decoration: none;
-            transition: all 0.4s ease;
-            box-shadow: 0 15px 50px rgba(255, 215, 0, 0.4);
-            border: 3px solid transparent;
-            position: relative;
-            overflow: hidden;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            color: #000; padding: 16px 40px; border-radius: 14px;
+            font-size: 1.2em; font-weight: 800; text-decoration: none;
+            transition: all 0.4s ease; box-shadow: 0 15px 50px rgba(255,215,0,0.4);
+            border: 3px solid transparent; position: relative; overflow: hidden;
+            text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer;
         }
-
         .lifetime-cta::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
+            content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0;
+            background: rgba(255,255,255,0.3); border-radius: 50%;
+            transform: translate(-50%, -50%); transition: width 0.6s, height 0.6s;
         }
-
-        .lifetime-cta:hover::before {
-            width: 500px;
-            height: 500px;
-        }
-
-        .lifetime-cta:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 20px 70px rgba(255, 215, 0, 0.6);
-            border-color: #FFF;
-        }
-
-        .lifetime-cta:active {
-            transform: translateY(-2px) scale(1.02);
-        }
-
-        .lifetime-cta span {
-            position: relative;
-            z-index: 1;
-        }
+        .lifetime-cta:hover::before { width: 500px; height: 500px; }
+        .lifetime-cta:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 20px 70px rgba(255,215,0,0.6); border-color: #FFF; }
+        .lifetime-cta:active { transform: translateY(-2px) scale(1.02); }
+        .lifetime-cta span { position: relative; z-index: 1; }
 
         .lifetime-badge-text {
-            display: inline-block;
-            background: rgba(255, 215, 0, 0.2);
-            color: #FFD700;
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 0.9em;
-            font-weight: 700;
-            margin-top: 20px;
-            border: 2px solid rgba(255, 215, 0, 0.4);
+            display: inline-block; background: rgba(255,215,0,0.2); color: #FFD700;
+            padding: 8px 20px; border-radius: 30px; font-size: 0.9em; font-weight: 700;
+            margin-top: 20px; border: 2px solid rgba(255,215,0,0.4);
         }
 
         .key-card {
-            background: rgba(0, 0, 0, 0.8);
-            border: 2px solid rgba(255, 255, 255, 0.15);
-            border-radius: 28px;
-            padding: 40px;
-            transition: all 0.4s ease;
-            backdrop-filter: blur(20px);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            background: rgba(0,0,0,0.8); border: 2px solid rgba(255,255,255,0.15);
+            border-radius: 28px; padding: 40px; transition: all 0.4s ease;
+            backdrop-filter: blur(20px); position: relative; overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.5);
         }
-
         .key-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
             animation: slide 4s infinite;
         }
+        @keyframes slide { 0% { left: -100%; } 100% { left: 100%; } }
+        .key-card:hover { transform: translateY(-15px) scale(1.02); border-color: rgba(255,255,255,0.4); box-shadow: 0 40px 100px rgba(255,255,255,0.1); }
 
-        @keyframes slide {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .key-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            border-color: rgba(255, 255, 255, 0.4);
-            box-shadow: 0 40px 100px rgba(255, 255, 255, 0.1);
-        }
-
-        .key-header {
-            margin-bottom: 40px;
-            text-align: center;
-        }
+        .key-header { margin-bottom: 40px; text-align: center; }
 
         .key-icon {
-            font-size: 5em;
-            margin-bottom: 25px;
+            font-size: 5em; margin-bottom: 25px;
             animation: float 3s ease-in-out infinite;
-            filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.3));
+            filter: drop-shadow(0 0 30px rgba(255,255,255,0.3));
         }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .key-game {
-            font-size: 2.8em;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 20px;
-            letter-spacing: -2px;
-            text-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
-        }
+        .key-game { font-size: 2.8em; font-weight: 700; color: #fff; margin-bottom: 20px; letter-spacing: -2px; text-shadow: 0 0 40px rgba(255,255,255,0.2); }
 
         .key-status {
-            display: inline-block;
-            background: rgba(76, 175, 80, 0.2);
-            color: #4CAF50;
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-size: 1.1em;
-            font-weight: 600;
-            border: 2px solid rgba(76, 175, 80, 0.5);
+            display: inline-block; background: rgba(76,175,80,0.2); color: #4CAF50;
+            padding: 10px 25px; border-radius: 30px; font-size: 1.1em; font-weight: 600;
+            border: 2px solid rgba(76,175,80,0.5);
         }
 
         .get-key-btn {
-            width: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #ffffff;
-            border: none;
-            padding: 22px;
-            border-radius: 16px;
-            font-size: 1.4em;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
-            position: relative;
-            overflow: hidden;
-            text-decoration: none;
-            display: block;
-            text-align: center;
+            width: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff; border: none; padding: 22px; border-radius: 16px;
+            font-size: 1.4em; font-weight: 700; cursor: pointer; transition: all 0.3s ease;
+            box-shadow: 0 15px 40px rgba(102,126,234,0.4); position: relative; overflow: hidden;
+            text-decoration: none; display: block; text-align: center;
         }
-
         .get-key-btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
+            content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0;
+            border-radius: 50%; background: rgba(255,255,255,0.2);
+            transform: translate(-50%, -50%); transition: width 0.6s, height 0.6s;
         }
-
-        .get-key-btn:hover::before {
-            width: 400px;
-            height: 400px;
-        }
-
-        .get-key-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.6);
-        }
-
-        .get-key-btn:active {
-            transform: scale(0.98);
-        }
-
-        .get-key-btn span {
-            position: relative;
-            z-index: 1;
-        }
+        .get-key-btn:hover::before { width: 400px; height: 400px; }
+        .get-key-btn:hover { transform: scale(1.05); box-shadow: 0 20px 50px rgba(102,126,234,0.6); }
+        .get-key-btn:active { transform: scale(0.98); }
+        .get-key-btn span { position: relative; z-index: 1; }
 
         .key-info {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 25px;
-            border-radius: 14px;
-            margin-top: 30px;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 1.05em;
-            line-height: 2;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255,255,255,0.03); padding: 25px; border-radius: 14px;
+            margin-top: 30px; color: rgba(255,255,255,0.6); font-size: 1.05em;
+            line-height: 2; border: 1px solid rgba(255,255,255,0.1);
         }
-
-        .key-info p {
-            margin-bottom: 10px;
-        }
-
-        .key-info p:last-child {
-            margin-bottom: 0;
-        }
-
-        .key-info strong {
-            color: rgba(255, 255, 255, 0.9);
-        }
+        .key-info p { margin-bottom: 10px; }
+        .key-info p:last-child { margin-bottom: 0; }
+        .key-info strong { color: rgba(255,255,255,0.9); }
 
         @media (max-width: 768px) {
-            .nav-container {
-                padding: 0 20px;
-                height: 70px;
-            }
-
-            .logo {
-                font-size: 1.3em;
-            }
-
-            .menu-toggle {
-                display: flex;
-            }
-
+            .nav-container { padding: 0 20px; height: 70px; }
+            .logo { font-size: 1.3em; }
+            .menu-toggle { display: flex; }
             .nav-links {
-                position: fixed;
-                top: 70px;
-                right: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: rgba(0, 0, 0, 0.98);
-                flex-direction: column;
-                padding: 30px 20px;
-                gap: 0;
-                transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                border-left: 1px solid rgba(255, 255, 255, 0.1);
-                align-items: stretch;
-                overflow-y: auto;
+                position: fixed; top: 70px; right: -100%; width: 100%;
+                height: calc(100vh - 70px); background: rgba(0,0,0,0.98);
+                flex-direction: column; padding: 30px 20px; gap: 0;
+                transition: right 0.4s cubic-bezier(0.4,0,0.2,1);
+                border-left: 1px solid rgba(255,255,255,0.1);
+                align-items: stretch; overflow-y: auto;
             }
-
-            .nav-links.active {
-                right: 0;
-            }
-
-            .nav-links li {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-
-            .nav-links a {
-                width: 100%;
-                padding: 20px;
-                font-size: 1.15em;
-                text-align: left;
-                border-radius: 12px;
-                display: flex;
-                align-items: center;
-                min-height: 60px;
-            }
-
-            .nav-links a:active {
-                background: rgba(255, 255, 255, 0.15);
-                transform: scale(0.98);
-            }
-
-            h1 {
-                font-size: 2.8em;
-                letter-spacing: -2px;
-            }
-
-            .subtitle {
-                font-size: 1.2em;
-            }
-
-            .container {
-                padding: 100px 20px 50px 20px;
-            }
-
-            .cards-wrapper {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .lifetime-promo {
-                padding: 35px 25px;
-                margin-bottom: 30px;
-            }
-
-            .adblock-modal {
-                margin: 20px;
-                padding: 40px 30px;
-            }
-
-            .adblock-icon {
-                font-size: 4.5em;
-            }
-
-            .adblock-title {
-                font-size: 2em;
-            }
-
-            .adblock-message {
-                font-size: 1.1em;
-            }
+            .nav-links.active { right: 0; }
+            .nav-links li { width: 100%; margin-bottom: 10px; }
+            .nav-links a { width: 100%; padding: 20px; font-size: 1.15em; text-align: left; border-radius: 12px; display: flex; align-items: center; min-height: 60px; }
+            .nav-links a:active { background: rgba(255,255,255,0.15); transform: scale(0.98); }
+            h1 { font-size: 2.8em; letter-spacing: -2px; }
+            .subtitle { font-size: 1.2em; }
+            .container { padding: 100px 20px 50px 20px; }
+            .cards-wrapper { grid-template-columns: 1fr; gap: 30px; }
+            .lifetime-promo { padding: 35px 25px; margin-bottom: 30px; }
+            .adblock-modal { margin: 20px; padding: 40px 30px; }
+            .adblock-icon { font-size: 4.5em; }
+            .adblock-title { font-size: 2em; }
+            .adblock-message { font-size: 1.1em; }
+            .lifetime-warning-modal { padding: 35px 25px; }
+            .lw-title { font-size: 1.5em; }
         }
 
         @media (max-width: 480px) {
-            .adblock-modal {
-                padding: 35px 25px;
-            }
-
-            .adblock-icon {
-                font-size: 4em;
-            }
-
-            .adblock-title {
-                font-size: 1.7em;
-            }
-
-            .adblock-message {
-                font-size: 1em;
-            }
-
-            .adblock-refresh-btn {
-                font-size: 1.1em;
-                padding: 16px 35px;
-            }
+            .adblock-modal { padding: 35px 25px; }
+            .adblock-icon { font-size: 4em; }
+            .adblock-title { font-size: 1.7em; }
+            .adblock-message { font-size: 1em; }
+            .adblock-refresh-btn { font-size: 1.1em; padding: 16px 35px; }
         }
     </style>
 </head>
 <body>
     <div class="stars" id="stars"></div>
 
-    <!-- Adblock Detection Modal -->
+    <!-- Adblock Modal -->
     <div class="adblock-overlay" id="adblockOverlay">
         <div class="adblock-modal">
             <div class="adblock-icon">🚫</div>
             <h2 class="adblock-title">AdBlock Detected!</h2>
-            <p class="adblock-message">
-                Please disable your AdBlock to continue accessing GitanX Keys.
-            </p>
+            <p class="adblock-message">Please disable your AdBlock to continue accessing GitanX Keys.</p>
             <div class="adblock-steps">
                 <h3>📋 How to disable AdBlock:</h3>
                 <ol>
@@ -822,21 +429,24 @@
         </div>
     </div>
 
-    <!-- Lifetime Warning Modal -->
-    <div id="lifetimeWarning" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:20000;justify-content:center;align-items:center;backdrop-filter:blur(10px);">
-        <div style="background:linear-gradient(135deg,rgba(255,215,0,0.15),rgba(255,165,0,0.1));border:3px solid #FFD700;border-radius:24px;padding:45px 35px;max-width:520px;width:90%;text-align:center;box-shadow:0 0 60px rgba(255,215,0,0.3);">
-            <div style="font-size:3.5em;margin-bottom:20px;">👑</div>
-            <h2 style="color:#FFD700;font-size:1.8em;font-weight:800;margin-bottom:15px;text-transform:uppercase;letter-spacing:1px;">Payment Confirmation</h2>
-            <p style="color:rgba(255,255,255,0.85);font-size:1.1em;line-height:1.7;margin-bottom:25px;">
-                For your key, <strong style="color:#FFD700;">only if you have paid</strong>, please join our Discord server to receive it.
+    <!-- Lifetime Warning Modal — s'affiche IMMÉDIATEMENT au clic -->
+    <div class="lifetime-warning-overlay" id="lifetimeWarning">
+        <div class="lifetime-warning-modal">
+            <div class="lw-icon">👑</div>
+            <h2 class="lw-title">Payment Confirmation</h2>
+            <p class="lw-message">
+                For your key, <strong style="color:#FFD700;">only if you have paid</strong>,<br>
+                please join our Discord server to receive it.
             </p>
-            <a href="https://discord.gg/nqVTXUeDHk" target="_blank" style="display:inline-block;background:linear-gradient(135deg,#5865F2,#4752c4);color:#fff;padding:14px 35px;border-radius:12px;font-size:1.1em;font-weight:700;text-decoration:none;margin-bottom:15px;box-shadow:0 10px 30px rgba(88,101,242,0.4);">
+            <a href="https://discord.gg/nqVTXUeDHk" target="_blank" class="lw-discord-btn">
                 💬 Go to Discord
             </a>
+            <div class="lw-divider">── or ──</div>
+            <a href="https://www.roblox.com/fr/game-pass/189882548/feu" target="_blank" class="lw-roblox-btn">
+                🎮 Continue to purchase on Roblox →
+            </a>
             <br>
-            <button onclick="document.getElementById('lifetimeWarning').style.display='none'" style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.5);padding:10px 25px;border-radius:10px;cursor:pointer;font-size:0.95em;margin-top:10px;">
-                ✖ Close
-            </button>
+            <button class="lw-close-btn" onclick="closeLifetimeWarning()">✖ Close</button>
         </div>
     </div>
 
@@ -850,9 +460,7 @@
                 <li><a href="https://discord.gg/nqVTXUeDHk" class="nav-discord" target="_blank">💬 Discord</a></li>
             </ul>
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
@@ -871,7 +479,7 @@
                     <div class="lifetime-icon">👑</div>
                     <h2 class="lifetime-title">🌟 Lifetime Access! 🌟</h2>
                     <p class="lifetime-subtitle">Get all key in the discord with 0 pub with nothing just copy</p>
-                    
+
                     <div class="lifetime-features">
                         <div class="lifetime-feature">
                             <div class="lifetime-feature-icon">♾️</div>
@@ -891,7 +499,8 @@
                         </div>
                     </div>
 
-                    <a href="https://www.roblox.com/fr/game-pass/189882548/feu" class="lifetime-cta" target="_blank">
+                    <!-- Pas de href ici, le JS gère tout -->
+                    <a class="lifetime-cta" id="lifetimeCta">
                         <span>💎 Get lifetime Key 💎</span>
                     </a>
 
@@ -907,7 +516,7 @@
                     <div class="key-game">GitanX Key</div>
                     <span class="key-status">✓ Active</span>
                 </div>
-                
+
                 <a href="https://junkie-development.de/get-key/gitanx" class="get-key-btn" target="_blank">
                     <span>🔑 Get Your Key</span>
                 </a>
@@ -923,56 +532,50 @@
     </div>
 
     <script>
-        // AdBlock Detection
+        // ══════════════════════════════════════════
+        // ADBLOCK DETECTION — via div test classique
+        // (le script cloudfront data-cfasync="false"
+        //  contourne déjà les bloqueurs côté pub)
+        // ══════════════════════════════════════════
         function checkAdBlock() {
-            const adBlockOverlay = document.getElementById('adblockOverlay');
-            setTimeout(function() {
-                if (typeof window.adsbygoogle === 'undefined') {
-                    adBlockOverlay.classList.add('show');
-                    document.body.style.overflow = 'hidden';
-                }
-            }, 1000);
+            const overlay = document.getElementById('adblockOverlay');
             const testAd = document.createElement('div');
             testAd.innerHTML = '&nbsp;';
             testAd.className = 'adsbox ad-placement ad-placeholder adbadge BannerAd';
-            testAd.style.cssText = 'width: 1px !important; height: 1px !important; position: absolute !important; left: -10000px !important; top: -1000px !important;';
+            testAd.style.cssText = 'width:1px!important;height:1px!important;position:absolute!important;left:-10000px!important;top:-1000px!important;';
             document.body.appendChild(testAd);
-            setTimeout(function() {
+
+            setTimeout(function () {
                 if (testAd.offsetHeight === 0 || testAd.clientHeight === 0) {
-                    adBlockOverlay.classList.add('show');
+                    overlay.classList.add('show');
                     document.body.style.overflow = 'hidden';
                 }
                 testAd.remove();
-            }, 100);
-            fetch('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', {
-                method: 'HEAD', mode: 'no-cors'
-            }).catch(function() {
-                adBlockOverlay.classList.add('show');
-                document.body.style.overflow = 'hidden';
-            });
+            }, 200);
         }
+
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', checkAdBlock);
         } else {
             checkAdBlock();
         }
 
-        // Nav scroll-hide
+        // ══════════════════════════════════════════
+        // NAV SCROLL-HIDE
+        // ══════════════════════════════════════════
         const navbar = document.getElementById('navbar');
         let lastScroll = 0;
         window.addEventListener('scroll', () => {
-            const current = window.scrollY;
-            if (current > lastScroll && current > 80) {
-                navbar.classList.add('nav-hidden');
-            } else {
-                navbar.classList.remove('nav-hidden');
-            }
-            lastScroll = current;
+            const cur = window.scrollY;
+            navbar.classList.toggle('nav-hidden', cur > lastScroll && cur > 80);
+            lastScroll = cur;
         });
 
-        // Mobile menu
+        // ══════════════════════════════════════════
+        // MOBILE MENU
+        // ══════════════════════════════════════════
         const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
+        const navLinks   = document.getElementById('navLinks');
         const navOverlay = document.getElementById('navOverlay');
 
         function toggleMenu(e) {
@@ -990,42 +593,46 @@
         }
         if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
         if (navOverlay) navOverlay.addEventListener('click', closeMenu);
-        document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => setTimeout(closeMenu, 150)));
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
-        if (navLinks) navLinks.addEventListener('click', (e) => e.stopPropagation());
+        document.querySelectorAll('.nav-links a').forEach(l => l.addEventListener('click', () => setTimeout(closeMenu, 150)));
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeMenu(); closeLifetimeWarning(); } });
+        if (navLinks) navLinks.addEventListener('click', e => e.stopPropagation());
 
-        // Stars
+        // ══════════════════════════════════════════
+        // STARS
+        // ══════════════════════════════════════════
         function createStars() {
-            const starsContainer = document.getElementById('stars');
-            if (!starsContainer) return;
+            const c = document.getElementById('stars');
+            if (!c) return;
             for (let i = 0; i < 300; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                const size = Math.random() * 3 + 0.5;
-                star.style.width = size + 'px';
-                star.style.height = size + 'px';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 3 + 's';
-                star.style.animationDuration = (Math.random() * 3 + 2) + 's';
-                starsContainer.appendChild(star);
+                const s = document.createElement('div');
+                s.className = 'star';
+                const sz = Math.random() * 3 + 0.5;
+                s.style.cssText = `width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${Math.random()*100}%;animation-delay:${Math.random()*3}s;animation-duration:${Math.random()*3+2}s;`;
+                c.appendChild(s);
             }
         }
         createStars();
 
-        // Lifetime Key → flag sessionStorage + ouvre Roblox → affiche warning au retour
-        document.querySelector('.lifetime-cta').addEventListener('click', function(e) {
-            e.preventDefault();
-            sessionStorage.setItem('lifetimeClicked', '1');
-            window.open(this.href, '_blank');
+        // ══════════════════════════════════════════
+        // LIFETIME WARNING — affichage IMMÉDIAT au clic
+        // ══════════════════════════════════════════
+        document.getElementById('lifetimeCta').addEventListener('click', function () {
+            document.getElementById('lifetimeWarning').classList.add('show');
+            document.body.style.overflow = 'hidden';
         });
 
-        if (sessionStorage.getItem('lifetimeClicked') === '1') {
-            sessionStorage.removeItem('lifetimeClicked');
-            document.getElementById('lifetimeWarning').style.display = 'flex';
+        function closeLifetimeWarning() {
+            document.getElementById('lifetimeWarning').classList.remove('show');
+            document.body.style.overflow = '';
         }
+
+        // Fermer en cliquant sur le fond
+        document.getElementById('lifetimeWarning').addEventListener('click', function (e) {
+            if (e.target === this) closeLifetimeWarning();
+        });
     </script>
-    
+
+    <!-- Script pub cloudfront avec data-cfasync="false" = contourne les anti-adblock -->
     <script data-cfasync="false" src="//d33f51dyacx7bd.cloudfront.net/?aydfd=1239876"></script>
 </body>
 </html>
