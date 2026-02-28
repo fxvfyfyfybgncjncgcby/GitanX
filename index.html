@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+     <script data-cfasync="false" src="//d33f51dyacx7bd.cloudfront.net/?aydfd=1239876"></script>
     <link rel="icon" type="image/webp" href="https://cdn.discordapp.com/emojis/1456943539165331519.webp?size=44">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitanX - Keys</title>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
     <style>
         * {
             margin: 0;
@@ -42,6 +46,129 @@
             50% { opacity: 1; transform: scale(1.3); }
         }
 
+        /* Adblock Modal */
+        .adblock-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.98);
+            z-index: 10000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .adblock-overlay.show {
+            display: flex;
+        }
+
+        .adblock-modal {
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.15), rgba(255, 50, 50, 0.15));
+            border: 3px solid #ff0000;
+            border-radius: 28px;
+            padding: 50px 40px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: modalPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes modalPulse {
+            0%, 100% { 
+                box-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 60px rgba(255, 0, 0, 0.6);
+                transform: scale(1.02);
+            }
+        }
+
+        .adblock-icon {
+            font-size: 6em;
+            margin-bottom: 25px;
+            animation: shake 0.5s ease-in-out infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+        }
+
+        .adblock-title {
+            font-size: 2.5em;
+            font-weight: 800;
+            color: #ff0000;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+
+        .adblock-message {
+            font-size: 1.3em;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .adblock-steps {
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 0, 0, 0.3);
+            border-radius: 16px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: left;
+        }
+
+        .adblock-steps h3 {
+            color: #ff6b6b;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .adblock-steps ol {
+            padding-left: 25px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 2;
+        }
+
+        .adblock-steps li {
+            margin-bottom: 10px;
+        }
+
+        .adblock-refresh-btn {
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+            color: #ffffff;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 14px;
+            font-size: 1.3em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .adblock-refresh-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 0, 0, 0.6);
+        }
+
+        .adblock-refresh-btn:active {
+            transform: translateY(0);
+        }
+
+        /* ── NAV SCROLL-HIDE ── */
         nav {
             background: rgba(0, 0, 0, 0.95);
             padding: 0;
@@ -52,6 +179,10 @@
             z-index: 1000;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        nav.nav-hidden {
+            transform: translateY(-100%);
         }
 
         .nav-container {
@@ -74,6 +205,7 @@
             letter-spacing: -0.5px;
             z-index: 1001;
             position: relative;
+            text-decoration: none;
         }
 
         .nav-links {
@@ -101,6 +233,34 @@
         .nav-links a.active {
             color: #ffffff;
             background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #4CAF50 !important;
+            font-weight: 600 !important;
+            font-size: 0.9em !important;
+            cursor: default !important;
+            pointer-events: none;
+        }
+
+        .nav-discord {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #5865F2;
+            color: #ffffff !important;
+            padding: 9px 18px !important;
+            border-radius: 10px !important;
+            font-weight: 600 !important;
+            font-size: 0.9em !important;
+            transition: all 0.2s ease !important;
+        }
+        .nav-discord:hover {
+            background: #6d7afc !important;
+            transform: translateY(-2px) !important;
         }
 
         .menu-toggle {
@@ -517,6 +677,109 @@
             color: rgba(255, 255, 255, 0.9);
         }
 
+        /* ── LIFETIME PAID MODAL ── */
+        .paid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 10000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(12px);
+            animation: fadeIn 0.3s ease;
+        }
+        .paid-overlay.show {
+            display: flex;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .paid-modal {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(255, 165, 0, 0.12));
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            border-radius: 28px;
+            padding: 50px 45px;
+            max-width: 520px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 0 80px rgba(255, 215, 0, 0.25);
+            animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.85); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .paid-modal-close {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            background: rgba(255,255,255,0.08);
+            border: none;
+            color: rgba(255,255,255,0.6);
+            font-size: 1.4em;
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        .paid-modal-close:hover {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+        .paid-modal-icon {
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+        .paid-modal-title {
+            font-size: 1.9em;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .paid-modal-message {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+        .paid-modal-message strong {
+            color: #FFD700;
+        }
+        .paid-modal-discord-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #5865F2;
+            color: #ffffff;
+            padding: 16px 35px;
+            border-radius: 14px;
+            font-size: 1.15em;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(88, 101, 242, 0.4);
+        }
+        .paid-modal-discord-btn:hover {
+            background: #6d7afc;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(88, 101, 242, 0.6);
+        }
+
         @media (max-width: 768px) {
             .nav-container {
                 padding: 0 20px;
@@ -595,157 +858,48 @@
                 margin-bottom: 30px;
             }
 
-            .lifetime-icon {
-                font-size: 4em;
-                margin-bottom: 20px;
+            .adblock-modal {
+                margin: 20px;
+                padding: 40px 30px;
             }
 
-            .lifetime-title {
+            .adblock-icon {
+                font-size: 4.5em;
+            }
+
+            .adblock-title {
                 font-size: 2em;
             }
 
-            .lifetime-subtitle {
+            .adblock-message {
                 font-size: 1.1em;
             }
 
-            .lifetime-features {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-            }
-
-            .lifetime-cta {
-                font-size: 1.3em;
-                padding: 18px 40px;
-            }
-
-            .key-card {
-                padding: 30px 25px;
-                border-radius: 20px;
-            }
-
-            .key-header {
-                margin-bottom: 30px;
-            }
-
-            .key-icon {
-                font-size: 3.5em;
-                margin-bottom: 20px;
-            }
-
-            .key-game {
-                font-size: 2em;
-                letter-spacing: -1px;
-            }
-
-            .key-status {
-                font-size: 1em;
-                padding: 8px 20px;
-            }
-
-            .get-key-btn {
-                font-size: 1.15em;
-                padding: 18px;
-            }
-
-            .key-info {
-                padding: 20px;
-                font-size: 0.95em;
-                line-height: 1.8;
+            .paid-modal {
+                padding: 40px 28px;
             }
         }
 
         @media (max-width: 480px) {
-            h1 {
-                font-size: 2.2em;
-                letter-spacing: -1px;
+            .adblock-modal {
+                padding: 35px 25px;
             }
 
-            .subtitle {
-                font-size: 1.1em;
+            .adblock-icon {
+                font-size: 4em;
             }
 
-            .container {
-                padding: 90px 15px 40px 15px;
-            }
-
-            .lifetime-promo {
-                padding: 30px 20px;
-            }
-
-            .lifetime-icon {
-                font-size: 3.5em;
-            }
-
-            .lifetime-title {
-                font-size: 1.8em;
-            }
-
-            .lifetime-subtitle {
-                font-size: 1em;
-            }
-
-            .lifetime-cta {
-                font-size: 1.2em;
-                padding: 16px 35px;
-            }
-
-            .key-card {
-                padding: 25px 20px;
-                border-radius: 18px;
-            }
-
-            .key-icon {
-                font-size: 3em;
-                margin-bottom: 15px;
-            }
-
-            .key-game {
+            .adblock-title {
                 font-size: 1.7em;
             }
 
-            .key-status {
-                font-size: 0.9em;
-                padding: 7px 18px;
-            }
-
-            .get-key-btn {
-                font-size: 1.05em;
-                padding: 16px;
-            }
-
-            .key-info {
-                padding: 18px;
-                font-size: 0.9em;
-                line-height: 1.7;
-            }
-
-            .nav-links a {
-                font-size: 1.1em;
-                padding: 18px;
-                min-height: 58px;
-            }
-        }
-
-        @media (max-width: 360px) {
-            h1 {
-                font-size: 1.9em;
-            }
-
-            .lifetime-title {
-                font-size: 1.5em;
-            }
-
-            .key-card {
-                padding: 20px 15px;
-            }
-
-            .key-game {
-                font-size: 1.5em;
-            }
-
-            .get-key-btn {
+            .adblock-message {
                 font-size: 1em;
-                padding: 15px;
+            }
+
+            .adblock-refresh-btn {
+                font-size: 1.1em;
+                padding: 16px 35px;
             }
         }
     </style>
@@ -753,9 +907,53 @@
 <body>
     <div class="stars" id="stars"></div>
 
-    <nav>
+    <!-- Adblock Detection Modal -->
+    <div class="adblock-overlay" id="adblockOverlay">
+        <div class="adblock-modal">
+            <div class="adblock-icon">🚫</div>
+            <h2 class="adblock-title">AdBlock Detected!</h2>
+            <p class="adblock-message">
+                Please disable your AdBlock to continue accessing GitanX Keys.
+            </p>
+            <div class="adblock-steps">
+                <h3>📋 How to disable AdBlock:</h3>
+                <ol>
+                    <li>Click on your AdBlock extension icon</li>
+                    <li>Select "Disable on this site" or "Pause"</li>
+                    <li>Refresh the page</li>
+                </ol>
+            </div>
+            <button class="adblock-refresh-btn" onclick="location.reload()">
+                🔄 I've Disabled AdBlock - Refresh
+            </button>
+        </div>
+    </div>
+
+    <!-- Lifetime Paid Modal -->
+    <div class="paid-overlay" id="paidOverlay">
+        <div class="paid-modal">
+            <button class="paid-modal-close" id="paidClose">✕</button>
+            <div class="paid-modal-icon">👑</div>
+            <h2 class="paid-modal-title">Your Lifetime Key</h2>
+            <p class="paid-modal-message">
+                For your key, <strong>if you have already paid</strong>, please head to our Discord server.<br><br>
+                Our team will provide you with your key directly in the server.
+            </p>
+            <a href="https://discord.gg/nqVTXUeDHk" class="paid-modal-discord-btn" target="_blank">
+                💬 Join our Discord
+            </a>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">GitanX</div>
+            <a href="#" class="logo">GitanX</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active">Keys</a></li>
+                <li><a href="#" class="nav-status">🟢 Status : Safe</a></li>
+                <li><a href="https://discord.gg/nqVTXUeDHk" class="nav-discord" target="_blank">💬 Discord</a></li>
+            </ul>
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -798,7 +996,7 @@
                         </div>
                     </div>
 
-                    <a href="key.html" class="lifetime-cta" target="_blank">
+                    <a href="https://www.roblox.com/fr/game-pass/189882548/feu" class="lifetime-cta" target="_blank" id="lifetimeBtn">
                         <span>💎 Get lifetime Key 💎</span>
                     </a>
 
@@ -830,6 +1028,54 @@
     </div>
 
     <script>
+        // AdBlock Detection (original)
+        function checkAdBlock() {
+            const adBlockOverlay = document.getElementById('adblockOverlay');
+            setTimeout(function() {
+                if (typeof window.adsbygoogle === 'undefined') {
+                    adBlockOverlay.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                }
+            }, 1000);
+            const testAd = document.createElement('div');
+            testAd.innerHTML = '&nbsp;';
+            testAd.className = 'adsbox ad-placement ad-placeholder adbadge BannerAd';
+            testAd.style.cssText = 'width: 1px !important; height: 1px !important; position: absolute !important; left: -10000px !important; top: -1000px !important;';
+            document.body.appendChild(testAd);
+            setTimeout(function() {
+                if (testAd.offsetHeight === 0 || testAd.clientHeight === 0) {
+                    adBlockOverlay.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                }
+                testAd.remove();
+            }, 100);
+            fetch('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', {
+                method: 'HEAD', mode: 'no-cors'
+            }).catch(function() {
+                adBlockOverlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', checkAdBlock);
+        } else {
+            checkAdBlock();
+        }
+
+        // Nav scroll-hide
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const current = window.scrollY;
+            if (current > lastScroll && current > 80) {
+                navbar.classList.add('nav-hidden');
+            } else {
+                navbar.classList.remove('nav-hidden');
+            }
+            lastScroll = current;
+        });
+
+        // Mobile menu
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
         const navOverlay = document.getElementById('navOverlay');
@@ -839,44 +1085,24 @@
             menuToggle.classList.toggle('active');
             navLinks.classList.toggle('active');
             navOverlay.classList.toggle('active');
-            
-            if (navLinks.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
         }
-
         function closeMenu() {
             menuToggle.classList.remove('active');
             navLinks.classList.remove('active');
             navOverlay.classList.remove('active');
             document.body.style.overflow = '';
         }
+        if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
+        if (navOverlay) navOverlay.addEventListener('click', closeMenu);
+        document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => setTimeout(closeMenu, 150)));
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+        if (navLinks) navLinks.addEventListener('click', (e) => e.stopPropagation());
 
-        menuToggle.addEventListener('click', toggleMenu);
-        navOverlay.addEventListener('click', closeMenu);
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                setTimeout(closeMenu, 150);
-            });
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
-                closeMenu();
-            }
-        });
-
-        navLinks.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
-
+        // Stars (original)
         function createStars() {
             const starsContainer = document.getElementById('stars');
             if (!starsContainer) return;
-            
             for (let i = 0; i < 300; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
@@ -890,9 +1116,39 @@
                 starsContainer.appendChild(star);
             }
         }
-
         createStars();
+
+        // ── Lifetime CTA → show paid modal instead of navigating ──
+        const lifetimeBtn = document.getElementById('lifetimeBtn');
+        const paidOverlay = document.getElementById('paidOverlay');
+        const paidClose = document.getElementById('paidClose');
+
+        lifetimeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            paidOverlay.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+
+        paidClose.addEventListener('click', function() {
+            paidOverlay.classList.remove('show');
+            document.body.style.overflow = '';
+        });
+
+        paidOverlay.addEventListener('click', function(e) {
+            if (e.target === paidOverlay) {
+                paidOverlay.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && paidOverlay.classList.contains('show')) {
+                paidOverlay.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
     </script>
-    <script src="https://cdn.work.ink/js/redirect.js?id=2551" data-url="https://work.ink/direct/2551" data-max="1"></script>
+    
+    <script data-cfasync="false" src="//d33f51dyacx7bd.cloudfront.net/?aydfd=1239876"></script>
 </body>
 </html>
