@@ -677,109 +677,6 @@
             color: rgba(255, 255, 255, 0.9);
         }
 
-        /* ── LIFETIME PAID MODAL ── */
-        .paid-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.92);
-            z-index: 10000;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(12px);
-            animation: fadeIn 0.3s ease;
-        }
-        .paid-overlay.show {
-            display: flex;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .paid-modal {
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(255, 165, 0, 0.12));
-            border: 2px solid rgba(255, 215, 0, 0.5);
-            border-radius: 28px;
-            padding: 50px 45px;
-            max-width: 520px;
-            width: 90%;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 0 80px rgba(255, 215, 0, 0.25);
-            animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        @keyframes popIn {
-            from { opacity: 0; transform: scale(0.85); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        .paid-modal-close {
-            position: absolute;
-            top: 18px;
-            right: 22px;
-            background: rgba(255,255,255,0.08);
-            border: none;
-            color: rgba(255,255,255,0.6);
-            font-size: 1.4em;
-            cursor: pointer;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-        }
-        .paid-modal-close:hover {
-            background: rgba(255,255,255,0.15);
-            color: #fff;
-        }
-        .paid-modal-icon {
-            font-size: 5em;
-            margin-bottom: 20px;
-        }
-        .paid-modal-title {
-            font-size: 1.9em;
-            font-weight: 800;
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 18px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .paid-modal-message {
-            font-size: 1.1em;
-            color: rgba(255, 255, 255, 0.85);
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-        .paid-modal-message strong {
-            color: #FFD700;
-        }
-        .paid-modal-discord-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: #5865F2;
-            color: #ffffff;
-            padding: 16px 35px;
-            border-radius: 14px;
-            font-size: 1.15em;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(88, 101, 242, 0.4);
-        }
-        .paid-modal-discord-btn:hover {
-            background: #6d7afc;
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(88, 101, 242, 0.6);
-        }
-
         @media (max-width: 768px) {
             .nav-container {
                 padding: 0 20px;
@@ -874,10 +771,6 @@
             .adblock-message {
                 font-size: 1.1em;
             }
-
-            .paid-modal {
-                padding: 40px 28px;
-            }
         }
 
         @media (max-width: 480px) {
@@ -929,19 +822,21 @@
         </div>
     </div>
 
-    <!-- Lifetime Paid Modal -->
-    <div class="paid-overlay" id="paidOverlay">
-        <div class="paid-modal">
-            <button class="paid-modal-close" id="paidClose">✕</button>
-            <div class="paid-modal-icon">👑</div>
-            <h2 class="paid-modal-title">Your Lifetime Key</h2>
-            <p class="paid-modal-message">
-                For your key, <strong>if you have already paid</strong>, please head to our Discord server.<br><br>
-                Our team will provide you with your key directly in the server.
+    <!-- Lifetime Warning Modal -->
+    <div id="lifetimeWarning" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:20000;justify-content:center;align-items:center;backdrop-filter:blur(10px);">
+        <div style="background:linear-gradient(135deg,rgba(255,215,0,0.15),rgba(255,165,0,0.1));border:3px solid #FFD700;border-radius:24px;padding:45px 35px;max-width:520px;width:90%;text-align:center;box-shadow:0 0 60px rgba(255,215,0,0.3);">
+            <div style="font-size:3.5em;margin-bottom:20px;">👑</div>
+            <h2 style="color:#FFD700;font-size:1.8em;font-weight:800;margin-bottom:15px;text-transform:uppercase;letter-spacing:1px;">Payment Confirmation</h2>
+            <p style="color:rgba(255,255,255,0.85);font-size:1.1em;line-height:1.7;margin-bottom:25px;">
+                For your key, <strong style="color:#FFD700;">only if you have paid</strong>, please join our Discord server to receive it.
             </p>
-            <a href="https://discord.gg/nqVTXUeDHk" class="paid-modal-discord-btn" target="_blank">
-                💬 Join our Discord
+            <a href="https://discord.gg/nqVTXUeDHk" target="_blank" style="display:inline-block;background:linear-gradient(135deg,#5865F2,#4752c4);color:#fff;padding:14px 35px;border-radius:12px;font-size:1.1em;font-weight:700;text-decoration:none;margin-bottom:15px;box-shadow:0 10px 30px rgba(88,101,242,0.4);">
+                💬 Go to Discord
             </a>
+            <br>
+            <button onclick="document.getElementById('lifetimeWarning').style.display='none'" style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.5);padding:10px 25px;border-radius:10px;cursor:pointer;font-size:0.95em;margin-top:10px;">
+                ✖ Close
+            </button>
         </div>
     </div>
 
@@ -996,7 +891,7 @@
                         </div>
                     </div>
 
-                    <a href="https://www.roblox.com/fr/game-pass/189882548/feu" class="lifetime-cta" target="_blank" id="lifetimeBtn">
+                    <a href="https://www.roblox.com/fr/game-pass/189882548/feu" class="lifetime-cta" target="_blank">
                         <span>💎 Get lifetime Key 💎</span>
                     </a>
 
@@ -1028,7 +923,7 @@
     </div>
 
     <script>
-        // AdBlock Detection (original)
+        // AdBlock Detection
         function checkAdBlock() {
             const adBlockOverlay = document.getElementById('adblockOverlay');
             setTimeout(function() {
@@ -1099,7 +994,7 @@
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
         if (navLinks) navLinks.addEventListener('click', (e) => e.stopPropagation());
 
-        // Stars (original)
+        // Stars
         function createStars() {
             const starsContainer = document.getElementById('stars');
             if (!starsContainer) return;
@@ -1118,35 +1013,17 @@
         }
         createStars();
 
-        // ── Lifetime CTA → show paid modal instead of navigating ──
-        const lifetimeBtn = document.getElementById('lifetimeBtn');
-        const paidOverlay = document.getElementById('paidOverlay');
-        const paidClose = document.getElementById('paidClose');
-
-        lifetimeBtn.addEventListener('click', function(e) {
+        // Lifetime Key → flag sessionStorage + ouvre Roblox → affiche warning au retour
+        document.querySelector('.lifetime-cta').addEventListener('click', function(e) {
             e.preventDefault();
-            paidOverlay.classList.add('show');
-            document.body.style.overflow = 'hidden';
+            sessionStorage.setItem('lifetimeClicked', '1');
+            window.open(this.href, '_blank');
         });
 
-        paidClose.addEventListener('click', function() {
-            paidOverlay.classList.remove('show');
-            document.body.style.overflow = '';
-        });
-
-        paidOverlay.addEventListener('click', function(e) {
-            if (e.target === paidOverlay) {
-                paidOverlay.classList.remove('show');
-                document.body.style.overflow = '';
-            }
-        });
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && paidOverlay.classList.contains('show')) {
-                paidOverlay.classList.remove('show');
-                document.body.style.overflow = '';
-            }
-        });
+        if (sessionStorage.getItem('lifetimeClicked') === '1') {
+            sessionStorage.removeItem('lifetimeClicked');
+            document.getElementById('lifetimeWarning').style.display = 'flex';
+        }
     </script>
     
     <script data-cfasync="false" src="//d33f51dyacx7bd.cloudfront.net/?aydfd=1239876"></script>
